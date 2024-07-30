@@ -1,8 +1,16 @@
-// eslint-disable-next-line react/prop-types
-export default function Guitar ({guitar, addTwoCart}) {
+import type { Guitar } from "../types";
 
-    // eslint-disable-next-line react/prop-types
-    const {id, name, image, description, price} = guitar;
+interface GuitarProps {
+    guitar: Guitar, 
+    addTwoCart : (item: Guitar) => void
+}
+
+
+export default function Guitar ({guitar, addTwoCart} : GuitarProps) {
+
+    const { name, image, description, price} = guitar;
+
+    //El tipo de dato any quiere decir que la variable puede ser modificada en cualquier parte del codigo
 
 
     return (
