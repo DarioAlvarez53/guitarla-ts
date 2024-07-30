@@ -1,4 +1,23 @@
-export const db = [
+//Sintaxis para crear un type
+// type Guitar = {
+//     id: number;
+//     name: string;
+//     image: string;
+//     description: string;
+//     price: number
+// }
+
+//Sintaxis de un interface
+interface Guitar {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    price: number
+}
+
+
+export const db : Guitar[] = [
     {
         id: 1,
         name: 'Lukather',
